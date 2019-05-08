@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Game Name="Massive, a game of four forces" Version="0.0.1">
+  <Cards>
+    <Composite>
+      <Hadron>
+        <Baryon>
+
+          <!-- Proton -->
+          <Card Name="Proton" Type="Composite" Group="Hadron" Classification="Baryon">
+            <!-- Description -->
+            <Description>This card represents a proton. It resides in the nucleus-space.</Description>
+            <!-- Characteristics -->
+            <Characteristics>
+              <Characteristic Name="Classification">Baryon</Characteristic>
+              <Characteristic Name="Composition">
+                <Card>Up Quark</Card>
+                <Card>Up Quark</Card>
+                <Card>Down Quark</Card>
+              </Characteristic>
+              <Characteristic Name="Generation">First</Characteristic>
+              <Characteristic Name="Interactions">
+                <Card>Strong Force</Card>
+                <Card>Weak Positive Force</Card>
+                <Card>Weak Negative Force</Card>
+              </Characteristic>
+              <Characteristic Name="Location">Nucleus-space</Characteristic>
+              <Characteristic Name="ScientificNotation">p+</Characteristic>
+              <Characteristic Name="Charge">+1 e</Characteristic>
+              <Characteristic Name="Mass">938.2720813(58) MeV/c2</Characteristic>
+              <Characteristic Name="Spin">1/2</Characteristic>
+            </Characteristics>
+            <!-- Media -->
+            <Media>
+              <Image Type="Traker">Cards/Baryons/BaryonCard_Proton01.jpg</Image>
+            </Media>
+          </Card>
+
+          <!-- Neutron -->
+          <Card Name="Neutron" Type="Composite" Group="Hadron" Classification="Baryon">
+            <!-- Description -->
+            <Description>This card represents a neutron. It resides in the nucleus-space.</Description>
+            <!-- Characteristics -->
+            <Characteristics>
+              <Characteristic Name="Classification">Baryon</Characteristic>
+              <Characteristic Name="Composition">
+                <Card>Up Quark</Card>
+                <Card>Down Quark</Card>
+                <Card>Down Quark</Card>
+              </Characteristic>
+              <Characteristic Name="Generation">First</Characteristic>
+              <Characteristic Name="Interactions">
+                <Card>Strong Force</Card>
+                <Card>Weak Positive Force</Card>
+                <Card>Weak Negative Force</Card>
+              </Characteristic>
+              <Characteristic Name="Location">Nucleus-space</Characteristic>
+              <Characteristic Name="ScientificNotation">n0</Characteristic>
+              <Characteristic Name="Charge">0 e</Characteristic>
+              <Characteristic Name="Mass">939.5654133(58) MeV/c2</Characteristic>
+              <Characteristic Name="Spin">1/2</Characteristic>
+            </Characteristics>
+            <!-- Media -->
+            <Media>
+              <Image Type="Traker">Cards/Baryons/BaryonCard_Neutron01.jpg</Image>
+            </Media>
+          </Card>
+
+        </Baryon>
+      </Hadron>
+    </Composite>
+
+    <Elementary>
+      <Fermions>
+        <Leptons>
+
+          <!-- Electron -->
+          <Card Name="Electron" Type="Elementary" Group="Fermion" Classification="Lepton">
+            <!-- Description -->
+            <Description>This card represents an electron. It resides in the orbital-space.</Description>
+            <!-- Characteristics -->
+            <Characteristics>
+              <Characteristic Name="Generation">First</Characteristic>
+              <Characteristic Name="Interactions">
+                <Card>Electromagnetic Force</Card>
+              </Characteristic>
+              <Characteristic Name="Location">Orbital-space</Characteristic>
+              <Characteristic Name="ScientificNotation">e-</Characteristic>
+              <Characteristic Name="Charge">-1 e</Characteristic>
+              <Characteristic Name="Mass">0.5109989461(31) MeV/c2</Characteristic>
+              <Characteristic Name="Spin">1/2</Characteristic>
+            </Characteristics>
+            <!-- Media -->
+            <Media>
+              <Image Type="Traker">Cards/Leptons/LeptonCard_Electron01.jpg</Image>
+            </Media>
+          </Card>
+
+        </Leptons>
+
+        <Quarks>
+
+          <!-- Up -->
+          <Card Name="Up quark" Type="Elementary" Group="Fermion" Classification="Quark">
+            <!-- Description -->
+            <Description>This card represents an up quark. It resides in the nucleus-space.</Description>
+            <!-- Characteristics -->
+            <Characteristics>
+              <Characteristic Name="Generation">First</Characteristic>
+              <Characteristic Name="Interactions">
+                <Card>Strong Force</Card>
+              </Characteristic>
+              <Characteristic Name="Location">Nucleus-space</Characteristic>
+              <Characteristic Name="ScientificNotation">u</Characteristic>
+              <Characteristic Name="Charge">+2/3 e</Characteristic>
+              <Characteristic Name="Mass">2.3(+0.7−0.5) MeV/c2</Characteristic>
+              <Characteristic Name="Spin">1/2</Characteristic>
+            </Characteristics>
+            <!-- Media -->
+            <Media>
+              <Image Type="Traker">Cards/Quarks/QuarkCard_Up01.jpg</Image>
+            </Media>
+          </Card>
+
+          <!-- Down -->
+          <Card Name="Down quark" Type="Elementary" Group="Fermion" Classification="Quark">
+            <!-- Description -->
+            <Description>This card represents a down quark. It resides in the nucleus-space.</Description>
+            <!-- Characteristics -->
+            <Characteristics>
+              <Characteristic Name="Generation">First</Characteristic>
+              <Characteristic Name="Interactions">
+                <Card>Strong Force</Card>
+              </Characteristic>
+              <Characteristic Name="Location">Nucleus-space</Characteristic>
+              <Characteristic Name="ScientificNotation">d</Characteristic>
+              <Characteristic Name="Charge">-1/3 e</Characteristic>
+              <Characteristic Name="Mass">4.8(+0.5−0.3) MeV/c2</Characteristic>
+              <Characteristic Name="Spin">1/2</Characteristic>
+            </Characteristics>
+            <!-- Media -->
+            <Media>
+              <Image Type="Traker">Cards/Quarks/QuarkCard_Down01.jpg</Image>
+            </Media>
+          </Card>
+
+        </Quarks>
+      </Fermions>
+
+      <Bosons>
+        <Gauge>
+
+          <!-- Strong -->
+          <Card Name="Strong Force" Type="Elementary" Group="Bosons" Classification="Gauge">
+            <!-- Description -->
+            <Description>This card represents the strong force. It acts upon the nucleus-space.</Description>
+            <!-- Characteristics -->
+            <Characteristics>
+              <Characteristic Name="Composition">
+                <Particle Type="Gauge Boson">Gluon</Particle>
+              </Characteristic>
+              <Characteristic Name="Interactions">
+                <Card>Proton</Card>
+                <Card>Neutron</Card>
+              </Characteristic>
+              <Characteristic Name="ScientificNotation">g</Characteristic>
+              <Characteristic Name="Charge">0 e</Characteristic>
+              <Characteristic Name="Mass">0 MeV/c2</Characteristic>
+              <Characteristic Name="Spin">1</Characteristic>
+            </Characteristics>
+            <!-- Media -->
+            <Media>
+              <Image Type="Traker">Cards/Bosons/BosonCard_StrongForce01.jpg</Image>
+            </Media>
+          </Card>
+
+          <!-- Weak Positive -->
+          <Card Name="Weak Positive Force" Type="Elementary" Group="Bosons" Classification="Gauge">
+            <!-- Description -->
+            <Description>This card represents the weak positive force. It acts upon the nucleus-space.</Description>
+            <!-- Characteristics -->
+            <Characteristics>
+              <Characteristic Name="Composition">
+                <Particle Type="Gauge Boson">W</Particle>
+              </Characteristic>
+              <Characteristic Name="Interactions">
+                <Card>Proton</Card>
+              </Characteristic>
+              <Characteristic Name="ScientificNotation">W+</Characteristic>
+              <Characteristic Name="Charge">+1 e</Characteristic>
+              <Characteristic Name="Mass">80.385±0.015 GeV/c2</Characteristic>
+              <Characteristic Name="Spin">1</Characteristic>
+            </Characteristics>
+            <!-- Media -->
+            <Media>
+              <Image Type="Traker">Cards/Bosons/BosonCard_WeakPositiveForce01.jpg</Image>
+            </Media>
+          </Card>
+
+          <!-- Weak Negative -->
+          <Card Name="Weak Negative Force" Type="Elementary" Group="Bosons" Classification="Gauge">
+            <!-- Description -->
+            <Description>This card represents the weak negative force. It acts upon the nucleus-space.</Description>
+            <!-- Characteristics -->
+            <Characteristics>
+              <Characteristic Name="Composition">
+                <Particle Type="Gauge Boson">W</Particle>
+              </Characteristic>
+              <Characteristic Name="Interactions">
+                <Card>Neutron</Card>
+              </Characteristic>
+              <Characteristic Name="ScientificNotation">W-</Characteristic>
+              <Characteristic Name="Charge">-1 e</Characteristic>
+              <Characteristic Name="Mass">80.385±0.015 GeV/c2</Characteristic>
+              <Characteristic Name="Spin">1</Characteristic>
+            </Characteristics>
+            <!-- Media -->
+            <Media>
+              <Image Type="Traker">Cards/Bosons/BosonCard_WeakNegativeForce01.jpg</Image>
+            </Media>
+          </Card>
+
+          <!-- Electromagnetic -->
+          <Card Name="Electromagnetic Force" Type="Elementary" Group="Bosons" Classification="Gauge">
+            <!-- Description -->
+            <Description>This card represents the electromagnetic force. It acts upon the orbital-space.</Description>
+            <!-- Characteristics -->
+            <Characteristics>
+              <Characteristic Name="Composition">
+                <Particle Type="Gauge Boson">Photon</Particle>
+              </Characteristic>
+              <Characteristic Name="Interactions">
+                <Card>Electron</Card>
+              </Characteristic>
+              <Characteristic Name="ScientificNotation">γ</Characteristic>
+              <Characteristic Name="Charge">0 e</Characteristic>
+              <Characteristic Name="Mass">0 MeV/c2</Characteristic>
+              <Characteristic Name="Spin">1</Characteristic>
+            </Characteristics>
+            <!-- Media -->
+            <Media>
+              <Image Type="Traker">Cards/Bosons/BosonCard_ElectromagneticForce01.jpg</Image>
+            </Media>
+          </Card>
+
+        </Gauge>
+      </Bosons>
+    </Elementary>
+
+    <Events>
+
+      <!-- Black Hole -->
+      <Card Name="Black Hole">
+        <!-- Description -->
+        <Description>This card represents a black hole event.</Description>
+        <!-- Characteristics -->
+        <Characteristics>
+        </Characteristics>
+        <!-- Media -->
+        <Media>
+          <Image Type="Traker">Cards/Events/EventCard_BlackHole01.jpg</Image>
+        </Media>
+      </Card>
+
+      <!-- Cosmic Rays -->
+      <Card Name="Cosmic Rays">
+        <!-- Description -->
+        <Description>This card represents a cosmic rays event.</Description>
+        <!-- Characteristics -->
+        <Characteristics>
+        </Characteristics>
+        <!-- Media -->
+        <Media>
+          <Image Type="Traker">Cards/Events/EventCard_CosmicRays01.jpg</Image>
+        </Media>
+      </Card>
+
+      <!-- Gravity -->
+      <Card Name="Gravity">
+        <!-- Description -->
+        <Description>This card represents a gravity event.</Description>
+        <!-- Characteristics -->
+        <Characteristics>
+        </Characteristics>
+        <!-- Media -->
+        <Media>
+          <Image Type="Traker">Cards/Events/EventCard_Gravity01.jpg</Image>
+        </Media>
+      </Card>
+
+      <!-- High Temperature -->
+      <Card Name="High Temperature">
+        <!-- Description -->
+        <Description>This card represents a high temperature event.</Description>
+        <!-- Characteristics -->
+        <Characteristics>
+        </Characteristics>
+        <!-- Media -->
+        <Media>
+          <Image Type="Traker">Cards/Events/EventCard_HighTemperature01.jpg</Image>
+        </Media>
+      </Card>
+
+    </Events>
+
+    <Elements>
+
+      <!-- Hydrogen -->
+      <Card Name="Hydrogen">
+        <!-- Description -->
+        <Description>This card represents a hydrogen element.</Description>
+        <!-- Characteristics -->
+        <Characteristics>
+          <Characteristic Name="ScientificNotation">H</Characteristic>
+          <Characteristic Name="AtomicNumber">1</Characteristic>
+          <Characteristic Name="AtomicMass">1.008 amu</Characteristic>
+          <Characteristic Name="Composition">
+            <Card>Proton</Card>
+            <Card>Electron</Card>
+          </Characteristic>
+        </Characteristics>
+        <!-- Media -->
+        <Media>
+          <Image Type="Traker">Cards/Elements/ElementCard_Hydrogen01.jpg</Image>
+        </Media>
+      </Card>
+
+      <!-- Helium -->
+      <Card Name="Helium">
+        <!-- Description -->
+        <Description>This card represents a helium element.</Description>
+        <!-- Characteristics -->
+        <Characteristics>
+          <Characteristic Name="ScientificNotation">He</Characteristic>
+          <Characteristic Name="AtomicNumber">2</Characteristic>
+          <Characteristic Name="AtomicMass">4.002 amu</Characteristic>
+          <Characteristic Name="Composition">
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+          </Characteristic>
+        </Characteristics>
+        <!-- Media -->
+        <Media>
+          <Image Type="Traker">Cards/Elements/ElementCard_Helium01.jpg</Image>
+        </Media>
+      </Card>
+
+      <!-- Lithium -->
+      <Card Name="Lithium">
+        <!-- Description -->
+        <Description>This card represents a lithium element.</Description>
+        <!-- Characteristics -->
+        <Characteristics>
+          <Characteristic Name="ScientificNotation">Li</Characteristic>
+          <Characteristic Name="AtomicNumber">3</Characteristic>
+          <Characteristic Name="AtomicMass">6.94 amu</Characteristic>
+          <Characteristic Name="Composition">
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+          </Characteristic>
+        </Characteristics>
+        <!-- Media -->
+        <Media>
+          <Image Type="Traker">Cards/Elements/ElementCard_Lithium01.jpg</Image>
+        </Media>
+      </Card>
+
+      <!-- Beryllium -->
+      <Card Name="Beryllium">
+        <!-- Description -->
+        <Description>This card represents a beryllium element.</Description>
+        <!-- Characteristics -->
+        <Characteristics>
+          <Characteristic Name="ScientificNotation">Be</Characteristic>
+          <Characteristic Name="AtomicNumber">4</Characteristic>
+          <Characteristic Name="AtomicMass">9.012 amu</Characteristic>
+          <Characteristic Name="Composition">
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+          </Characteristic>
+        </Characteristics>
+        <!-- Media -->
+        <Media>
+          <Image Type="Traker">Cards/Elements/ElementCard_Beryllium01.jpg</Image>
+        </Media>
+      </Card>
+
+      <!-- Boron -->
+      <Card Name="Boron">
+        <!-- Description -->
+        <Description>This card represents a boron element.</Description>
+        <!-- Characteristics -->
+        <Characteristics>
+          <Characteristic Name="ScientificNotation">B</Characteristic>
+          <Characteristic Name="AtomicNumber">5</Characteristic>
+          <Characteristic Name="AtomicMass">10.81 amu</Characteristic>
+          <Characteristic Name="Composition">
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+          </Characteristic>
+        </Characteristics>
+        <!-- Media -->
+        <Media>
+          <Image Type="Traker">Cards/Elements/ElementCard_Boron01.jpg</Image>
+        </Media>
+      </Card>
+
+      <!-- Carbon -->
+      <Card Name="Carbon">
+        <!-- Description -->
+        <Description>This card represents a carbon element.</Description>
+        <!-- Characteristics -->
+        <Characteristics>
+          <Characteristic Name="ScientificNotation">C</Characteristic>
+          <Characteristic Name="AtomicNumber">6</Characteristic>
+          <Characteristic Name="AtomicMass">12.011 amu</Characteristic>
+          <Characteristic Name="Composition">
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+          </Characteristic>
+        </Characteristics>
+        <!-- Media -->
+        <Media>
+          <Image Type="Traker">Cards/Elements/ElementCard_Carbon01.jpg</Image>
+        </Media>
+      </Card>
+
+      <!-- Nitrogen -->
+      <Card Name="Nitrogen">
+        <!-- Description -->
+        <Description>This card represents a nitrogen element.</Description>
+        <!-- Characteristics -->
+        <Characteristics>
+          <Characteristic Name="ScientificNotation">N</Characteristic>
+          <Characteristic Name="AtomicNumber">7</Characteristic>
+          <Characteristic Name="AtomicMass">14.007 amu</Characteristic>
+          <Characteristic Name="Composition">
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+          </Characteristic>
+        </Characteristics>
+        <!-- Media -->
+        <Media>
+          <Image Type="Traker">Cards/Elements/ElementCard_Nitrogen01.jpg</Image>
+        </Media>
+      </Card>
+
+      <!-- Oxygen -->
+      <Card Name="Oxygen">
+        <!-- Description -->
+        <Description>This card represents an oxygen element.</Description>
+        <!-- Characteristics -->
+        <Characteristics>
+          <Characteristic Name="ScientificNotation">O</Characteristic>
+          <Characteristic Name="AtomicNumber">8</Characteristic>
+          <Characteristic Name="AtomicMass">15.999 amu</Characteristic>
+          <Characteristic Name="Composition">
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+          </Characteristic>
+        </Characteristics>
+        <!-- Media -->
+        <Media>
+          <Image Type="Traker">Cards/Elements/ElementCard_Oxygen01.jpg</Image>
+        </Media>
+      </Card>
+
+      <!-- Fluorine -->
+      <Card Name="Fluorine">
+        <!-- Description -->
+        <Description>This card represents an oxygen element.</Description>
+        <!-- Characteristics -->
+        <Characteristics>
+          <Characteristic Name="ScientificNotation">F</Characteristic>
+          <Characteristic Name="AtomicNumber">9</Characteristic>
+          <Characteristic Name="AtomicMass">18.998 amu</Characteristic>
+          <Characteristic Name="Composition">
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+          </Characteristic>
+        </Characteristics>
+        <!-- Media -->
+        <Media>
+          <Image Type="Traker">Cards/Elements/ElementCard_Fluorine01.jpg</Image>
+        </Media>
+      </Card>
+
+      <!-- Neon -->
+      <Card Name="Neon">
+        <!-- Description -->
+        <Description>This card represents a neon element.</Description>
+        <!-- Characteristics -->
+        <Characteristics>
+          <Characteristic Name="ScientificNotation">Ne</Characteristic>
+          <Characteristic Name="AtomicNumber">10</Characteristic>
+          <Characteristic Name="AtomicMass">20.179 amu</Characteristic>
+          <Characteristic Name="Composition">
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Proton</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Neutron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+            <Card>Electron</Card>
+          </Characteristic>
+        </Characteristics>
+        <!-- Media -->
+        <Media>
+          <Image Type="Traker">Cards/Elements/ElementCard_Neon01.jpg</Image>
+        </Media>
+      </Card>
+
+    </Elements>
+
+  </Cards>
+</Game>
