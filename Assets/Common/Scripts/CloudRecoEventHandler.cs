@@ -139,7 +139,6 @@ public class CloudRecoEventHandler : MonoBehaviour, IObjectRecoEventHandler
             Debug.Log("MetaData: " + cloudRecoResult.MetaData);
             Debug.Log("TargetName: " + cloudRecoResult.TargetName);
             Debug.Log("Pointer: " + cloudRecoResult.TargetSearchResultPtr);
-            Debug.Log("TargetSize: " + cloudRecoResult.TargetSize);
             Debug.Log("TrackingRating: " + cloudRecoResult.TrackingRating);
             Debug.Log("UniqueTargetId: " + cloudRecoResult.UniqueTargetId);
         }

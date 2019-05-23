@@ -51,20 +51,23 @@ public class AboutManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Return))
+        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp(KeyCode.JoystickButton0))
         {
             LoadNextScene();
         }
 
         if (Input.GetKeyUp(KeyCode.Escape))
         {
+            if (Application.isEditor)
+            {
 #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-#elif UNITY_ANDROID
-			// On Android, the Back button is mapped to the Esc key
-			// Exit app
-            Application.Quit();
+                UnityEditor.EditorApplication.isPlaying = false;
 #endif
+            }
+            else
+            {
+                Application.Quit();
+            }
         }
     }
     #endregion // MONOBEHAVIOUR_METHODS

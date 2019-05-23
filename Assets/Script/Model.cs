@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Model : MonoBehaviour
 {
-	public static Model controller;
-    
+	public static Model controller;    
 	public static ConfigScene confScene;
+
 	// Start is called before the first frame update
 	private void Awake()
 	{
@@ -15,47 +15,40 @@ public class Model : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
             controller = this;
-        }
+		}
         else if (controller != this)
         {
             Destroy(gameObject);
         }
 
-		confScene = new ConfigScene();
-	}
-	void Start()
-    {
-		string filepath = getPath("Assets/StreamingAssets/Massive_Cards.xml");
-		Debug.Log(filepath);
-		confScene = ConfigScene.Load("Assets/StreamingAssets/Massive_Cards.xml");
-		Debug.Log(confScene.Cards.Count);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-	public string getPath(string filename)
-    {
-		/*if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.OSXEditor)
+		string path = "";
+		string file_path = "Massive_Cards.xml";
+        if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.OSXEditor)
         {
-			return "+filename;
-
             //Debug.Log("in windows or mac platform");
+            //path = @"file://" + Application.streamingAssetsPath + "/" + file_path;
+            path = Application.streamingAssetsPath + "/" + file_path;
         }
         else if (Application.platform == RuntimePlatform.Android)
         {
-			return "jar:file://"  + "!/assets/" + filename;
-
+            //Debug.Log("in android platform");
+            //path = @"jar:file://" + Application.dataPath + "!/assets/" + file_path;
+            path = Application.streamingAssetsPath + "/" + file_path;
         }
         else if (Application.platform == RuntimePlatform.IPhonePlayer)
         {
             //Debug.Log("in iphone plateform");
-			return "file://"  + "/" + filename;
-         
-        }*/
-		return filename;
-    }
+            //path = @"file://" + Application.streamingAssetsPath + "/" + file_path;
+            path = Application.streamingAssetsPath + "/" + file_path;
+        }
+        Debug.Log("path : " + path);
+
+
+		confScene = new ConfigScene();
+		confScene = ConfigScene.Load(path);
+	}
+	public ConfigScene GetConfigScene()
+	{
+		return confScene;
+	}
 }

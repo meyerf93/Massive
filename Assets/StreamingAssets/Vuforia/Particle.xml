@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="QuarkCard_Up01" size="0.063500 0.086675" />
-    <ImageTarget name="QuarkCard_Down01" size="0.063500 0.086675" />
-    <ImageTarget name="LeptonCard_Electron01" size="0.063500 0.086675" />
+    <ImageTarget name="Electromagnetic_Force" size="0.063500 0.086675" />
+    <ImageTarget name="Weak_Negative_Force" size="0.063500 0.086675" />
+    <ImageTarget name="Strong_Force" size="0.063500 0.086675" />
+    <ImageTarget name="Neutron" size="0.063500 0.086675" />
+    <ImageTarget name="Weak_Positive_Force" size="0.063500 0.086675" />
+    <ImageTarget name="Proton" size="0.063500 0.086675" />
+    <ImageTarget name="Electron" size="0.063500 0.086675" />
+    <ImageTarget name="Up_Quark" size="0.063500 0.086675" />
+    <ImageTarget name="Down_Quark" size="0.063500 0.086675" />
     <ImageTarget name="EventCard_Wormhole01" size="0.063500 0.086675" />
     <ImageTarget name="EventCard_LowTemperature01" size="0.063500 0.086675" />
     <ImageTarget name="EventCard_HighTemperature01" size="0.063500 0.086675" />
@@ -20,11 +26,5 @@
     <ImageTarget name="ElementCard_Carbon01" size="0.063500 0.086675" />
     <ImageTarget name="ElementCard_Boron01" size="0.063500 0.086675" />
     <ImageTarget name="ElementCard_Beryllium01" size="0.063500 0.086675" />
-    <ImageTarget name="BosonCard_WeakPositiveForce01" size="0.063500 0.086675" />
-    <ImageTarget name="BosonCard_WeakNegativeForce01" size="0.063500 0.086675" />
-    <ImageTarget name="BosonCard_StrongForce01" size="0.063500 0.086675" />
-    <ImageTarget name="BosonCard_ElectromagneticForce01" size="0.063500 0.086675" />
-    <ImageTarget name="BaryonCard_Proton01" size="0.063500 0.086675" />
-    <ImageTarget name="BaryonCard_Neutron01" size="0.063500 0.086675" />
   </Tracking>
 </QCARConfig>

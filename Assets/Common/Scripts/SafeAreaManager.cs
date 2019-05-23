@@ -19,11 +19,11 @@ public class SafeAreaManager : MonoBehaviour
         public bool applyBottomSafeArea = false;
     }
 
-    [SerializeField] RectTransform topArea;
-    [SerializeField] RectTransform bottomArea;
+    [SerializeField] RectTransform topArea = null;
+    [SerializeField] RectTransform bottomArea = null;
     [SerializeField] Color topAreaColor;
     [SerializeField] Color bottomAreaColor;
-    [SerializeField] SafeAreaRect[] safeAreaRects;
+    [SerializeField] SafeAreaRect[] safeAreaRects = null;
     Rect lastSafeArea = new Rect(0, 0, 0, 0);
     ScreenOrientation lastOrientation;
 

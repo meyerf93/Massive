@@ -6,8 +6,8 @@ using System.Xml;
 using System.IO;
 using System;
 
-//[System.Serializable]
-//public enum Card {Proton, Neutron};
+/*[System.Serializable]
+public enum Card {Proton, Neutron};*/
 
 [System.Serializable]
 public enum Type {Composite, Elementary,Events,Elements};
@@ -37,12 +37,94 @@ public class Mass
     [XmlElement("Unit")]
     public string Unit;
 }
-
+/*        <Attack>
+         <Interactions>
+           <InteractionElement>
+             <Name>Strong Frorce</Name>
+             <Description>Split the Proton into Up and Down Quark</Description>
+           </InteractionElement> 
+           <InteractionElement>
+             <Name>Weak_Positive_Force</Name>
+             <Description>Change a proton into a neutron</Description>
+           </InteractionElement>
+           <InteractionElement>
+             <Name>Weak_Negative_Force</Name>
+             <Description>Change a neutron into a proton</Description>
+           </InteractionElement>
+         </Interactions>
+       </Attack>
+       <Defense>
+         <Interactions>
+           <InteractionElement>
+             <Name>Strong Frorce</Name>
+             <Description>Protect you from Strong Force attack</Description>
+           </InteractionElement>                         
+           <InteractionElement>
+             <Name>Weak_Positive_Force</Name>
+             <Description>Can protect a attack from a Weak Negative Force</Description>
+           </InteractionElement>
+           <InteractionElement>
+             <Name>Weak_Negative_Force</Name>
+             <Description>Can protect a attack from a Weak Negative Force</Description>
+           </InteractionElement>
+        </Interactions>
+       </Defense>
+       <Build>
+         <Interactions>
+           <InteractionElement>
+             <Name>Weak_Positive_Force</Name>
+             <Description>Turn a Proton into a Neutron</Description>
+           </InteractionElement>
+           <InteractionElement>
+             <Name>Weak_Negative_Force</Name>
+             <Description>Turn a Neutron into a Proton</Description>
+           </InteractionElement>  
+           <InteractionElement>
+             <Name>Electromagnetic_Force</Name>
+             <Description>Need at least a one free Proton to attach a Electron</Description>
+           </InteractionElement> 
+           <InteractionElement>
+             <Name>Neutron</Name> 
+             <Description>Permit to to create a atom of element, the element depent of the number of Neutron, Proton and Electron</Description>
+           </InteractionElement>
+           <InteractionElement>
+             <Name>Electron</Name> 
+             <Description>Permit to to create a atom of element, the element depent of the number of Neutron, Proton and Electron</Description>
+           </InteractionElement>
+         </Interactions>
+       </Build>*/
 [System.Serializable]
 public class InteractionElement
 {
-	[XmlElement("IntercationElement")]
-	public string IntercationElement;
+	[XmlElement("Name")]
+	public string Name;
+
+    [XmlElement("Description")]
+    public string Description;
+}
+
+[System.Serializable]
+public class Attack
+{
+    [XmlArray("Interactions")]
+    [XmlArrayItem("InteractionElement")]
+    public List<InteractionElement> Interactions = new List<InteractionElement>();
+}
+
+[System.Serializable]
+public class Defense
+{
+    [XmlArray("Interactions")]
+    [XmlArrayItem("InteractionElement")]
+    public List<InteractionElement> Interactions = new List<InteractionElement>();
+}
+
+[System.Serializable]
+public class Build
+{
+    [XmlArray("Interactions")]
+    [XmlArrayItem("InteractionElement")]
+    public List<InteractionElement> Interactions = new List<InteractionElement>();
 }
 
 
@@ -66,9 +148,14 @@ public class Characteristics
 	[XmlArrayItem("ComposerElement")]
 	public List<ComposerElement> Compositions = new List<ComposerElement>();
 
-	[XmlArray("Interactions")]
-	[XmlArrayItem("InteractionElement")]
-	public List<InteractionElement> Interactions = new List<InteractionElement>();
+    [XmlElement("Attack")]
+    public Attack Attack;
+
+    [XmlElement("Defense")]
+    public Defense Defense;
+
+    [XmlElement("Build")]
+    public Build Build;
 
 	[XmlElement("Location")]
 	public string Location;
@@ -125,7 +212,10 @@ public class Card
 	[XmlElement("Type")]
 	public Type Type;
 
-	[XmlElement("Group")]
+    [XmlAttribute("Name")]
+    public string Name;
+
+    [XmlElement("Group")]
 	public Group group;
 
 	[XmlElement("Classification")]
@@ -136,6 +226,8 @@ public class Card
 
 	[XmlElement("Media")]
 	public Media Media;
+
+	public bool isTracked;
 }
 
 /*
@@ -192,11 +284,12 @@ public class ConfigScene
             xmlRoot.ElementName = "Game";
             xmlRoot.IsNullable = true;
             			
-			Debug.Log(path);
 			XmlSerializer serializer = new XmlSerializer(typeof(ConfigScene), xmlRoot);
 			using (StreamReader reader = new System.IO.StreamReader(path))
             {
-                return serializer.Deserialize(reader.BaseStream) as ConfigScene;
+				ConfigScene temp_config = serializer.Deserialize(reader.BaseStream) as ConfigScene;
+
+				return temp_config;
             }
         }
         catch (Exception e)

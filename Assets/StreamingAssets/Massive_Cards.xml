@@ -14,19 +14,74 @@
         <Generation>First</Generation>
         <Compositions>
           <ComposerElement>
-            <Name>Up Quark</Name>
+            <Name>Up_Quark</Name>
             <Number>2</Number>
           </ComposerElement>
           <ComposerElement>
-            <Name>Down Quark</Name>
+            <Name>Down_Quark</Name>
             <Number>1</Number>
           </ComposerElement>
+          <ComposerElement>
+            <Name>Strong_Force</Name>
+            <Number>1</Number>  
+          </ComposerElement>
         </Compositions>
-        <Interactions>
-          <InteractionElement>Strong Force</InteractionElement>
-          <InteractionElement>Weak Positive Force</InteractionElement>
-          <InteractionElement>Weak Negative Force</InteractionElement>
-        </Interactions>
+        <Attack>
+          <Interactions>
+            <InteractionElement>
+              <Name>Strong Frorce</Name>
+              <Description>Split the Proton into Up and Down Quark</Description>
+            </InteractionElement> 
+            <InteractionElement>
+              <Name>Weak_Positive_Force</Name>
+              <Description>Change a proton into a neutron</Description>
+            </InteractionElement>
+            <InteractionElement>
+              <Name>Weak_Negative_Force</Name>
+              <Description>Change a neutron into a proton</Description>
+            </InteractionElement>
+          </Interactions>
+        </Attack>
+        <Defense>
+          <Interactions>
+            <InteractionElement>
+              <Name>Strong Frorce</Name>
+              <Description>Protect you from Strong Force attack</Description>
+            </InteractionElement>                         
+            <InteractionElement>
+              <Name>Weak_Positive_Force</Name>
+              <Description>Can protect a attack from a Weak Negative Force</Description>
+            </InteractionElement>
+            <InteractionElement>
+              <Name>Weak_Negative_Force</Name>
+              <Description>Can protect a attack from a Weak Negative Force</Description>
+            </InteractionElement>
+         </Interactions>
+        </Defense>
+        <Build>
+          <Interactions>
+            <InteractionElement>
+              <Name>Weak_Positive_Force</Name>
+              <Description>Turn a Proton into a Neutron</Description>
+            </InteractionElement>
+            <InteractionElement>
+              <Name>Weak_Negative_Force</Name>
+              <Description>Turn a Neutron into a Proton</Description>
+            </InteractionElement>  
+            <InteractionElement>
+              <Name>Electromagnetic_Force</Name>
+              <Description>Need at least a one free Proton to attach a Electron</Description>
+            </InteractionElement> 
+            <InteractionElement>
+              <Name>Neutron</Name> 
+              <Description>Permit to to create a atom of element, the element depent of the number of Neutron, Proton and Electron</Description>
+            </InteractionElement>
+            <InteractionElement>
+              <Name>Electron</Name> 
+              <Description>Permit to to create a atom of element, the element depent of the number of Neutron, Proton and Electron</Description>
+            </InteractionElement>
+          </Interactions>
+        </Build>
         <Location>Nucleus-space</Location>
         <ScientificNotation>p+</ScientificNotation>
         <Charge>
@@ -44,6 +99,7 @@
         <Image>Cards/Baryons/BaryonCard_Proton01.jpg</Image>
       </Media>
     </Card>
+        
     <!-- Neutron -->
     <Card Name="Neutron">
       <!-- Description -->
@@ -57,19 +113,74 @@
         <Generation>First</Generation>
         <Compositions>
           <ComposerElement>
-            <Name>Up Quark</Name>
+            <Name>Up_Quark</Name>
             <Number>1</Number>
           </ComposerElement>
           <ComposerElement>
-            <Name>Down Quark</Name>
+            <Name>Down_Quark</Name>
             <Number>2</Number>
           </ComposerElement>
+          <ComposerElement>
+            <Name>Strong_Force</Name>
+            <Number>1</Number>
+          </ComposerElement>
         </Compositions>
-        <Interactions>
-          <InteractionElement>Strong Force</InteractionElement>
-          <InteractionElement>Weak Positive Force</InteractionElement>
-          <InteractionElement>Weak Negative Force</InteractionElement>
-        </Interactions>
+        <Attack>
+          <Interactions>
+            <InteractionElement>
+              <Name>Strong Frorce</Name>
+              <Description>Split the Neutron into Up and Down Quark</Description>
+            </InteractionElement> 
+            <InteractionElement>
+              <Name>Weak_Positive_Force</Name>
+              <Description>Change a proton into a neutron</Description>
+            </InteractionElement>
+            <InteractionElement>
+              <Name>Weak_Negative_Force</Name>
+              <Description>Change a neutron into a proton</Description>
+            </InteractionElement>
+          </Interactions>
+        </Attack>
+        <Defense>
+          <Interactions>
+            <InteractionElement>
+              <Name>Strong Frorce</Name>
+              <Description>Protect you from Strong Force attack</Description>
+            </InteractionElement>                         
+            <InteractionElement>
+              <Name>Weak_Positive_Force</Name>
+              <Description>Can protect a attack from a Weak Negative Force</Description>
+            </InteractionElement>
+            <InteractionElement>
+              <Name>Weak_Negative_Force</Name>
+              <Description>Can protect a attack from a Weak Negative Force</Description>
+            </InteractionElement>
+          </Interactions>
+        </Defense>
+        <Build>
+          <Interactions>
+            <InteractionElement>
+              <Name>Weak_Positive_Force</Name>
+              <Description>Turn a Proton into a Neutron</Description>
+            </InteractionElement>
+            <InteractionElement>
+              <Name>Weak_Negative_Force</Name>
+              <Description>Turn a Neutron into a Proton</Description>
+            </InteractionElement>  
+            <InteractionElement>
+              <Name>Electromagnetic_Force</Name>
+              <Description>Need at least a one free Proton to attach a Electron</Description>
+            </InteractionElement> 
+            <InteractionElement>
+              <Name>Neutron</Name> 
+              <Description>Permit to to create a atom of element, the element depent of the number of Neutron, Proton and Electron</Description>
+            </InteractionElement>
+            <InteractionElement>
+              <Name>Electron</Name> 
+              <Description>Permit to to create a atom of element, the element depent of the number of Neutron, Proton and Electron</Description>
+            </InteractionElement>
+          </Interactions>
+        </Build>
         <Location>Nucleus-space</Location>
         <ScientificNotation>n0</ScientificNotation>
         <Charge>
@@ -100,9 +211,34 @@
       <Characteristics>
         <Generation>First</Generation>
         <Compositions></Compositions>
-        <Interactions>
-          <InteractionElement>Electromagnetic Force</InteractionElement>
-        </Interactions>
+        <Attack>
+          <Interactions>
+            <InteractionElement>
+              <Name>Electromagnetic Force</Name> 
+              <Description>Try to take a electron from a Atom</Description>
+            </InteractionElement>
+          </Interactions>
+        </Attack>
+        <Defense>
+          <Interactions>
+            <InteractionElement>
+              <Name>Electromagnetic Force</Name> 
+              <Description>Protect you from an attack of a Electromagnetic Force</Description>
+            </InteractionElement>
+          </Interactions>
+        </Defense>
+        <Build>
+          <Interactions>
+            <InteractionElement>
+              <Name>Electromagnetic_Force</Name>
+              <Description>Need at least a one free Proton to attach a Electron</Description>
+            </InteractionElement>                 
+            <InteractionElement>
+              <Name>Electron</Name> 
+              <Description>Permit to to create a atom of element, the element depent of the number of Neutron, Proton and Electron</Description>
+            </InteractionElement>
+          </Interactions>
+        </Build>
         <Location>Orbital-space</Location>
         <ScientificNotation>e-</ScientificNotation>
         <Charge>
@@ -122,7 +258,7 @@
     </Card>
 
     <!-- Up -->
-    <Card Name="Up quark">
+    <Card Name="Up_Quark">
       <!-- Description -->
       <Description>This card represents an up quark. It resides in the nucleus-space.</Description>
       <!-- Characteristics -->
@@ -133,9 +269,17 @@
       <Characteristics>
         <Generation>First</Generation>
         <Compositions></Compositions>
-        <Interactions>
-          <InteractionElement>Strong Force</InteractionElement>
-        </Interactions>
+        <Attack></Attack>
+        <Defense>
+        </Defense>
+        <Build>
+          <Interactions>
+            <InteractionElement>
+              <Name>Strong Froce</Name>
+              <Description>Can combine Up Quark and Down Quark to create a Proton and Neutron</Description>
+            </InteractionElement>
+          </Interactions>
+        </Build>        
         <Location>Nucleus-space</Location>
         <ScientificNotation>u</ScientificNotation>
         <Charge>
@@ -155,7 +299,7 @@
     </Card>
 
     <!-- Down -->
-    <Card Name="Down quark">
+    <Card Name="Down_Quark">
       <!-- Description -->
       <Description>This card represents a down quark. It resides in the nucleus-space.</Description>
       <!-- Characteristics -->
@@ -166,9 +310,16 @@
       <Characteristics>
         <Generation>First</Generation>
         <Compositions></Compositions>
-        <Interactions>
-          <InteractionElement>Strong Force</InteractionElement>
+        <Attack></Attack>
+        <Defense></Defense>
+        <Build>
+          <Interactions>
+            <InteractionElement>
+                <Name>Strong Froce</Name>
+                <Description>Can combine Up Quark and Down Quark to create a Proton and Neutron</Description>
+            </InteractionElement>
         </Interactions>
+        </Build>        
         <Location>Nucleus-space</Location>
         <ScientificNotation>d</ScientificNotation>
         <Charge>
@@ -188,7 +339,7 @@
     </Card>
 
     <!-- Strong -->
-    <Card Name="Strong Force">
+    <Card Name="Strong_Force">
       <!-- Description -->
       <Description>This card represents the strong force. It acts upon the nucleus-space.</Description>
       <!-- Characteristics -->
@@ -202,10 +353,16 @@
         <Compositions>
           <Particle Type="Gauge Boson">Gluon</Particle>
         </Compositions>
-        <Interactions>
-          <InteractionElement>Proton</InteractionElement>
-          <InteractionElement>Neutron</InteractionElement>
-        </Interactions>
+        <Attack></Attack>
+        <Defense></Defense>
+        <Build>
+          <Interactions>
+            <InteractionElement>
+                <Name>Strong Froce</Name>
+                <Description>Can combine Up Quark and Down Quark to create a Proton and Neutron</Description>
+            </InteractionElement>
+          </Interactions>
+        </Build>        
         <ScientificNotation>g</ScientificNotation>
         <Charge>
           <Value>0</Value>
@@ -224,21 +381,41 @@
     </Card>
 
           <!-- Weak Positive -->
-    <Card Name="Weak Positive Force">
+    <Card Name="Weak_Positive_Force">
       <!-- Description -->
       <Description>This card represents the weak positive force. It acts upon the nucleus-space.</Description>
       <!-- Characteristics -->
       <Type>Elementary</Type>
       <Group>Bosons</Group>
       <Classification>Gauge</Classification>
-
       <Characteristics>
         <Compositions>
           <Particle Type="Gauge Boson">W</Particle>
         </Compositions>
-        <Interactions>
-          <InteractionElement>Proton</InteractionElement>
-        </Interactions>
+        <Attack>
+          <Interactions>
+            <InteractionElement>
+              <Name>Proton</Name>
+              <Description>Trun Proton into Neutron</Description>
+            </InteractionElement>
+          </Interactions>
+        </Attack>
+        <Defense>
+          <Interactions>
+            <InteractionElement>
+            <Name>Weak Negative Force</Name>
+            <Description>Protect from Weak Negative Force</Description>
+            </InteractionElement>
+          </Interactions>
+        </Defense>
+        <Build>
+          <Interactions>
+            <InteractionElement>
+              <Name>Proton</Name>
+              <Description>Trun Proton into Neutron</Description>
+            </InteractionElement>
+          </Interactions>
+        </Build>
         <ScientificNotation>W+</ScientificNotation>
         <Charge>
           <Value>1</Value>
@@ -257,7 +434,7 @@
     </Card>
 
           <!-- Weak Negative -->
-    <Card Name="Weak Negative Force">
+    <Card Name="Weak_Negative_Force">
       <!-- Description -->
       <Description>This card represents the weak negative force. It acts upon the nucleus-space.</Description>
       <!-- Characteristics -->
@@ -268,9 +445,30 @@
         <Compositions>
           <Particle Type="Gauge Boson">W</Particle>
         </Compositions>
-        <Interactions>
-          <InteractionElement>Neutron</InteractionElement>
-        </Interactions>
+        <Attack>
+          <Interactions>
+            <InteractionElement>
+              <Name>Neutron</Name>
+              <Description>Trun Neutron into Proton</Description>
+            </InteractionElement>
+          </Interactions>
+        </Attack>
+        <Defense>
+          <Interactions>
+            <InteractionElement>
+              <Name>Weak Positive Force</Name>
+              <Description>Protect from Weak Positive Force</Description>
+            </InteractionElement>
+          </Interactions>
+        </Defense>
+        <Build>
+          <Interactions>
+            <InteractionElement>
+              <Name>Proton</Name>
+              <Description>Trun Neutron into Proton</Description>
+            </InteractionElement>
+          </Interactions>
+        </Build>
         <ScientificNotation>W-</ScientificNotation>
         <Charge>
           <Value>1</Value>
@@ -289,7 +487,7 @@
     </Card>
 
     <!-- Electromagnetic -->
-    <Card Name="Electromagnetic Force">
+    <Card Name="Electromagnetic_Force">
       <!-- Description -->
       <Description>This card represents the electromagnetic force. It acts upon the orbital-space.</Description>
       <!-- Characteristics -->
@@ -300,9 +498,30 @@
         <Compositions>
           <Particle Type="Gauge Boson">Photon</Particle>
         </Compositions>
-        <Interactions>
-          <InteractionElement>Electron</InteractionElement>
-        </Interactions>
+        <Attack>
+          <Interactions>
+            <InteractionElement>
+              <Name>Electron</Name>
+              <Description>Try to take a Electron</Description>
+            </InteractionElement>
+          </Interactions>
+        </Attack>
+        <Defense>
+          <Interactions>
+            <InteractionElement>
+              <Name>Electromagnetic Force</Name>
+              <Description>Protect from Electromagnetic Force</Description>
+            </InteractionElement>
+          </Interactions>
+        </Defense>
+        <Build>
+          <Interactions>
+            <InteractionElement>
+              <Name>Electron</Name>
+              <Description>Link a Eletrcon with a Proton</Description>
+            </InteractionElement>
+          </Interactions>
+        </Build>
         <ScientificNotation>?</ScientificNotation>
         <Charge>
           <Value>0</Value>

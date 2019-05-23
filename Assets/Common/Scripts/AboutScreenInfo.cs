@@ -59,7 +59,7 @@ public class AboutScreenInfo
         titles = new Dictionary<string, string>()
         {
             { "ImageTargets", "Image Targets" },
-            { "VuMark", "VuMarks" },
+            { "VuMarks", "VuMarks" },
             { "CylinderTargets", "Cylinder Targets" },
             { "MultiTargets", "Multi Targets" },
             { "UserDefinedTargets", "User Defined Targets" },
@@ -103,7 +103,7 @@ public class AboutScreenInfo
             "\n• <link=https://developer.vuforia.com/legal/EULA><color=blue><u>Terms of Use</u></color></link>" +
             "\n• <link=https://developer.vuforia.com/legal/statistics><color=blue><u>Statistics</u></color></link>" +
             "\n\n" +
-            "© 2018 PTC Inc. All Rights Reserved." +
+            "© 2019 PTC Inc. All Rights Reserved." +
             "\n";
         string targetPDFsURL = "<link=https://library.vuforia.com/content/vuforia-library/en/articles/Solution/sample-apps-target-pdfs.html>";
 
@@ -140,7 +140,7 @@ public class AboutScreenInfo
         // VuMark
 
         descriptions.Add(
-            "VuMark",
+            "VuMarks",
             description +
             "\nThe VuMarks sample shows how to detect and track VuMarks." +
             "\n\n" +
