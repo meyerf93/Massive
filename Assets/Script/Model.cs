@@ -21,26 +21,25 @@ public class Model : MonoBehaviour
             Destroy(gameObject);
         }
 
+		string file_path = "Massive_Cards.xml";      
 		string path = "";
-		string file_path = "Massive_Cards.xml";
-        if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.OSXEditor)
+        if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.OSXEditor
+            || Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.OSXPlayer)
         {
             //Debug.Log("in windows or mac platform");
-            //path = @"file://" + Application.streamingAssetsPath + "/" + file_path;
-            path = Application.streamingAssetsPath + "/" + file_path;
+			path = Application.streamingAssetsPath + "/" + file_path;
         }
-        else if (Application.platform == RuntimePlatform.Android)
+		else if (Application.platform == RuntimePlatform.Android)
         {
-            //Debug.Log("in android platform");
-            //path = @"jar:file://" + Application.dataPath + "!/assets/" + file_path;
-            path = Application.streamingAssetsPath + "/" + file_path;
+			//Debug.Log("in android platform");
+			path = "Massive_Cards";
         }
         else if (Application.platform == RuntimePlatform.IPhonePlayer)
         {
             //Debug.Log("in iphone plateform");
-            //path = @"file://" + Application.streamingAssetsPath + "/" + file_path;
-            path = Application.streamingAssetsPath + "/" + file_path;
+			path = "file://" + Application.streamingAssetsPath + "/" + file_path;
         }
+
         Debug.Log("path : " + path);
 
 

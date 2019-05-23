@@ -55,7 +55,7 @@ public class Load_ui : MonoBehaviour
 
         Attack.text = temp_attack;
 
-        string temp_defense = "Attack : \r";
+        string temp_defense = "Defense : \r";
 
         foreach (InteractionElement element in temp_card.Characteristics.Defense.Interactions)
         {

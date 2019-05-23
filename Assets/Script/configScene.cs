@@ -285,12 +285,25 @@ public class ConfigScene
             xmlRoot.IsNullable = true;
             			
 			XmlSerializer serializer = new XmlSerializer(typeof(ConfigScene), xmlRoot);
-			using (StreamReader reader = new System.IO.StreamReader(path))
+            
+            if (Application.platform == RuntimePlatform.Android)
             {
-				ConfigScene temp_config = serializer.Deserialize(reader.BaseStream) as ConfigScene;
+				TextAsset textAsset = Resources.Load(path) as TextAsset;
 
+				TextReader textReader = new StringReader(textAsset.text);
+
+				ConfigScene temp_config = serializer.Deserialize(textReader) as ConfigScene;
 				return temp_config;
             }
+            else
+            {
+				using (StreamReader reader = new System.IO.StreamReader(path))
+                {
+                    ConfigScene temp_config = serializer.Deserialize(reader.BaseStream) as ConfigScene;
+
+                    return temp_config;
+                }
+            }    
         }
         catch (Exception e)
         {
@@ -300,6 +313,7 @@ public class ConfigScene
         }
     }
 }
+
 /*using UnityEngine;
  using System.Collections.Generic;
  using System.Xml;

@@ -1,12 +1,11 @@
 ﻿<Properties StartupConfiguration="{09C96DA6-C62C-91A0-62B3-ED023CFE61D8}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/CardInteraction.cs">
     <Files>
-      <File FileName="Assets/Script/Model.cs" Line="9" Column="2" />
-      <File FileName="Assets/Script/Load_ui.cs" Line="40" Column="2" />
-      <File FileName="Assets/Script/configScene.cs" Line="230" Column="23" />
+      <File FileName="Assets/Script/Model.cs" Line="30" Column="42" />
+      <File FileName="Assets/Script/Load_ui.cs" Line="44" Column="34" />
+      <File FileName="Assets/Script/configScene.cs" Line="291" Column="46" />
       <File FileName="Assets/StreamingAssets/Massive_Cards.xml" Line="340" Column="1" />
-      <File FileName="Assets/Script/TrackableCardInteraction.cs" Line="38" Column="1" />
-      <File FileName="Assets/Script/CardInteraction.cs" Line="138" Column="21" />
+      <File FileName="Assets/Script/CardInteraction.cs" Line="73" Column="10" />
       <File FileName="Assets/Script/Triangulator.cs" Line="23" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
