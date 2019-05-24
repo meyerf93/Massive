@@ -13,6 +13,9 @@ public class CardInteraction : MonoBehaviour
 	public GameObject Strong_Force;
 	public GameObject Weak_Positive_Force;
 
+	public GameObject Proton_prefabs;
+	public GameObject Neutron_prefabs;
+
 	private GameObject[] go_raw;
 	private Model model;
 	private ConfigScene config;
@@ -32,6 +35,8 @@ public class CardInteraction : MonoBehaviour
 
 	private List<Card> temp_card_list;
 	private List<GameObject> temp_list_gameObject;
+
+	private GameObject temp_atom_strong_force;
 
 
     // Start is called before the first frame update
@@ -63,6 +68,8 @@ public class CardInteraction : MonoBehaviour
 		temp_list_gameObject.Add(Up_Quark);
 		temp_list_gameObject.Add(Down_Quark);
 		temp_list_gameObject.Add(Strong_Force);
+
+
     }
 
     // Update is called once per frame
@@ -75,13 +82,20 @@ public class CardInteraction : MonoBehaviour
 		Debug.Log("card to display UI is detected : " + temp_visible);
 		foreach(Card card in temp_card_list)
 		{
-			card.uiIsVisible = temp_visible;
+			if(card.isTracked)
+			{
+				card.uiIsVisible = temp_visible;
+			}
 		}
 
 		lineRenderer.enabled = false;
         
 		if(Up_Quark_card.isTracked && Down_Quark_card.isTracked && Strong_Force_card.isTracked)
 		{
+			getAllAvailablePoints();
+            drawLines();
+            
+
 			Debug.Log("J'ai détecter la création d'un proton ou d'un neutron");
 		}
 		else if (Up_Quark_card.isTracked && Down_Quark_card.isTracked 
