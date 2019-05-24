@@ -11,6 +11,7 @@ public class CardInteraction : MonoBehaviour
 	public GameObject Up_Quark;
 	public GameObject Down_Quark;
 	public GameObject Strong_Force;
+	public GameObject Weak_Positive_Force;
 
 	private GameObject[] go_raw;
 	private Model model;
@@ -21,6 +22,7 @@ public class CardInteraction : MonoBehaviour
 	private Card Up_Quark_card;
 	private Card Down_Quark_card;
 	private Card Strong_Force_card;
+	private Card Weak_Positive_Force_card;
 
     private Vector2[] go_points;
     private GameObject[] go_n;
@@ -46,6 +48,8 @@ public class CardInteraction : MonoBehaviour
         Up_Quark_card = config.Cards.Find(r => r.Name == Up_Quark.name);
         Down_Quark_card = config.Cards.Find(r => r.Name == Down_Quark.name);
         Strong_Force_card = config.Cards.Find(r => r.Name == Strong_Force.name);
+		Weak_Positive_Force_card = config.Cards.Find(r => r.Name == Weak_Positive_Force.name);
+
 
 		temp_card_list = new List<Card>();
 		temp_card_list.Add(Proton_card);
@@ -53,6 +57,7 @@ public class CardInteraction : MonoBehaviour
 		temp_card_list.Add(Up_Quark_card);
 		temp_card_list.Add(Down_Quark_card);
 		temp_card_list.Add(Strong_Force_card);
+		temp_card_list.Add(Weak_Positive_Force_card);
 
 		temp_list_gameObject = new List<GameObject>();
 		temp_list_gameObject.Add(Up_Quark);
@@ -64,17 +69,28 @@ public class CardInteraction : MonoBehaviour
     void Update()
     {
 
-		getAllAvailablePoints();
-		drawLines();
 
-        if (Up_Quark_card.isTracked && Down_Quark_card.isTracked && Strong_Force_card.isTracked)
+
+		bool temp_visible = Weak_Positive_Force_card.isTracked;
+		Debug.Log("card to display UI is detected : " + temp_visible);
+		foreach(Card card in temp_card_list)
+		{
+			card.uiIsVisible = temp_visible;
+		}
+
+		lineRenderer.enabled = false;
+        
+		if(Up_Quark_card.isTracked && Down_Quark_card.isTracked && Strong_Force_card.isTracked)
+		{
+			Debug.Log("J'ai détecter la création d'un proton ou d'un neutron");
+		}
+		else if (Up_Quark_card.isTracked && Down_Quark_card.isTracked 
+		    || Up_Quark_card.isTracked && Strong_Force_card.isTracked 
+		    || Down_Quark_card.isTracked && Strong_Force_card.isTracked)
         {
+			getAllAvailablePoints();
+            drawLines();
             Debug.Log("bonjour, j'ai détecter une combinaison");
-        }
-        else if (Up_Quark_card.isTracked && Down_Quark_card.isTracked)
-        {
-            Debug.Log("j'ai detecter un Down Quark et un Up Quark");
-
         }
         else if (Down_Quark_card.isTracked)
         {
@@ -139,6 +155,7 @@ public class CardInteraction : MonoBehaviour
     // Draw Lines for Line Renderer
     private void drawLines()
     {
+		lineRenderer.enabled = true;
         // Set positions size
         lineRenderer.positionCount = go_points.Length;
 

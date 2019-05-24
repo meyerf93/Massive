@@ -8,7 +8,9 @@ public class Load_ui : MonoBehaviour
 {
 	private ImageTargetBehaviour target;
 	private Model model;
+	private ConfigScene config;
 
+	public Canvas canvas;
 	public Text Titre;
 	public Text Description;
 	public Text Build;
@@ -21,20 +23,27 @@ public class Load_ui : MonoBehaviour
 		model = FindObjectOfType<Model>();
 		target = GetComponent<Vuforia.ImageTargetBehaviour>();
         
-		ConfigScene temp_conf = model.GetConfigScene();
+		config = model.GetConfigScene();
 
 		Debug.Log("Name : " + target.name);
-		Card temp_card = temp_conf.Cards.Find(r => r.Name == target.name);
+		Card temp_card = config.Cards.Find(r => r.Name == target.name);
 
 		displayUI(temp_card);
         
     }
 
+	private void Update()
+	{
+		Card temp_card = config.Cards.Find(r => r.Name == target.name);
+		displayUI(temp_card);
+	}
+
 	void displayUI(Card temp_card)
 	{
+		canvas.enabled = temp_card.uiIsVisible;
+
 		string temp_titre = temp_card.Name.Replace('_', ' ');
-		Debug.Log("temp titre : " + temp_titre);
-		Titre.text = temp_titre;
+        Titre.text = temp_titre;
         Description.text = temp_card.Description;
 
         string temp_build = "Build : \r";

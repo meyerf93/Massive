@@ -228,6 +228,8 @@ public class Card
 	public Media Media;
 
 	public bool isTracked;
+
+	public bool uiIsVisible;
 }
 
 /*
@@ -284,10 +286,10 @@ public class ConfigScene
             xmlRoot.ElementName = "Game";
             xmlRoot.IsNullable = true;
             			
-			XmlSerializer serializer = new XmlSerializer(typeof(ConfigScene), xmlRoot);
             
             if (Application.platform == RuntimePlatform.Android)
             {
+				XmlSerializer serializer = new XmlSerializer(typeof(ConfigScene), xmlRoot);
 				TextAsset textAsset = Resources.Load(path) as TextAsset;
 
 				TextReader textReader = new StringReader(textAsset.text);
@@ -297,6 +299,7 @@ public class ConfigScene
             }
             else
             {
+				XmlSerializer serializer = new XmlSerializer(typeof(ConfigScene), xmlRoot);
 				using (StreamReader reader = new System.IO.StreamReader(path))
                 {
                     ConfigScene temp_config = serializer.Deserialize(reader.BaseStream) as ConfigScene;
