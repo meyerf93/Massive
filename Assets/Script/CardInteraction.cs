@@ -79,7 +79,6 @@ public class CardInteraction : MonoBehaviour
 
 
 		bool temp_visible = Weak_Positive_Force_card.isTracked;
-		Debug.Log("card to display UI is detected : " + temp_visible);
 		foreach(Card card in temp_card_list)
 		{
 			if(card.isTracked)
