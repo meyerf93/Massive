@@ -37,7 +37,7 @@ public class Model : MonoBehaviour
         else if (Application.platform == RuntimePlatform.IPhonePlayer)
         {
             //Debug.Log("in iphone plateform");
-			path = "file://" + Application.streamingAssetsPath + "/" + file_path;
+			path = "file://"+ Application.streamingAssetsPath + "/" + file_path;
         }
 
         Debug.Log("path : " + path);

@@ -287,7 +287,7 @@ public class ConfigScene
             xmlRoot.IsNullable = true;
             			
             
-            if (Application.platform == RuntimePlatform.Android)
+			if (Application.platform == RuntimePlatform.Android)
             {
 				XmlSerializer serializer = new XmlSerializer(typeof(ConfigScene), xmlRoot);
 				TextAsset textAsset = Resources.Load(path) as TextAsset;
